@@ -27,8 +27,22 @@ export function getRecommendation(fitsIn: FitsIn): string {
   if (fitsIn.straight) options.push('Straight Truck');
 
   const allFit = fitsIn.pup && fitsIn['50ft'] && fitsIn.straight;
-
   if (allFit) return 'Any Available';
+
   return options.length > 0 ? options.join(', ') : 'None – exceeds all capacities';
 }
+
+export function requiresSidewaysLoading(totalCarts: number, bins: number): boolean {
+  const cartSlots = totalCarts * 4;
+  const binSlots = bins; // 1 bin = 1 slot
+  const totalSlots = cartSlots + binSlots;
+
+  // If total slots used is divisible by 4, no sideways loading needed
+  return totalSlots % 4 !== 0;
+}
+
+
+
+
+
 

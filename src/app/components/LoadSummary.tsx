@@ -1,3 +1,7 @@
+'use client';
+
+import { requiresSidewaysLoading } from '@/app/utils/loadLogic';
+
 type LoadSummaryProps = {
     totalCarts: number;
     bins: number;
@@ -17,9 +21,19 @@ export default function LoadSummary({
     fitsIn,
     recommendation,
 }: LoadSummaryProps) {
+    const showSidewaysBadge = requiresSidewaysLoading(totalCarts, bins);
+
     return (
         <div className="mt-8 w-full max-w-md">
-            <h2 className="text-xl font-semibold mb-2">Summary:</h2>
+            <div className="flex items-center justify-between">
+                <h2 className="text-xl font-semibold mb-2">Summary:</h2>
+                {showSidewaysBadge && (
+                    <span className="badge badge-warning text-xs">
+                        ⚠️ Sideways Loading Needed
+                    </span>
+                )}
+            </div>
+
             <p>Total Carts: {totalCarts}</p>
             <p>Total Bins: {bins}</p>
             <p>Total Cart Equivalents: {totalCartEquiv}</p>
