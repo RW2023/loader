@@ -19,12 +19,13 @@ export const metadata: Metadata = {
   title: "Trailer Load Planner",
   description:
     "Easily calculate load options for Pup, 50 ft, and Straight Truck setups.",
-  metadataBase: new URL("https://lplanner.vercel.app"), // ← update with your actual domain
+  metadataBase: new URL("https://lplanner.vercel.app"),
+  manifest: "/manifest.webmanifest",
   openGraph: {
     title: "Trailer Load Planner",
     description:
       "Calculate load options instantly for Pup, 50 ft, and Straight Trucks.",
-    url: "https://yourdomain.com",
+    url: "https://lplanner.vercel.app",
     siteName: "Trailer Load Planner",
     images: [
       {
@@ -41,7 +42,12 @@ export const metadata: Metadata = {
     title: "Trailer Load Planner",
     description:
       "Instantly determine how your carts and bins fit across different trailer types.",
-    creator: "Ryan Wilson", 
+    creator: "Ryan Wilson",
+    images: ["/opengraph-image.png"],
+  },
+  icons: {
+    icon: "/favicon-96x96.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 

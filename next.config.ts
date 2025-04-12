@@ -1,7 +1,20 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const createPWAConfig = async (): Promise<NextConfig> => {
+  const { default: withPWA } = await import('next-pwa');
+
+  return withPWA({
+    dest: 'public',
+    register: true,
+    skipWaiting: true,
+  })({
+    experimental: {
+      serverActions: {
+        bodySizeLimit: '1mb',
+        allowedOrigins: ['*'],
+      },
+    },
+  });
 };
 
-export default nextConfig;
+export default createPWAConfig();
