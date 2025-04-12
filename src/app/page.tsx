@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import LoadInputForm from '@/app/components/LoadInputForm';
 import LoadSummary from '@/app/components/LoadSummary';
+import ResetButton from '@/app/components/ResetButton';
+
 import {
   getTotalCarts,
   getTotalCartEquiv,
@@ -14,6 +16,12 @@ export default function Home() {
   const [laundryCarts, setLaundryCarts] = useState(0);
   const [hmmsCarts, setHmmsCarts] = useState(0);
   const [bins, setBins] = useState(0);
+
+  const handleReset = () => {
+    setLaundryCarts(0);
+    setHmmsCarts(0);
+    setBins(0);
+  };
 
   const totalCarts = getTotalCarts(laundryCarts, hmmsCarts);
   const totalCartEquiv = getTotalCartEquiv(totalCarts, bins);
@@ -38,6 +46,8 @@ export default function Home() {
         fitsIn={fitsIn}
         recommendation={recommendation}
       />
+
+      <ResetButton onReset={handleReset} />
     </div>
   );
 }
