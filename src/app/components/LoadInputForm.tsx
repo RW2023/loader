@@ -26,7 +26,7 @@ export default function LoadInputForm({
                     min="0"
                     value={laundryCarts === 0 ? '' : laundryCarts}
                     onChange={(e) => setLaundryCarts(Number(e.target.value) || 0)}
-                    className="input input-bordered w-full"
+                    className="input input-bordered border border-base-content w-full"
                     placeholder="Enter number of laundry carts"
                 />
             </div>
@@ -38,7 +38,7 @@ export default function LoadInputForm({
                     min="0"
                     value={hmmsCarts === 0 ? '' : hmmsCarts}
                     onChange={(e) => setHmmsCarts(Number(e.target.value) || 0)}
-                    className="input input-bordered w-full"
+                    className="input input-bordered border border-base-content w-full"
                     placeholder="Enter number of HMMS carts"
                 />
             </div>
@@ -50,7 +50,7 @@ export default function LoadInputForm({
                     min="0"
                     value={bins === 0 ? '' : bins}
                     onChange={(e) => setBins(Number(e.target.value) || 0)}
-                    className="input input-bordered w-full"
+                    className="input input-bordered border border-base-content w-full"
                     placeholder="Enter number of bins"
                 />
             </div>
