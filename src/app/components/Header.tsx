@@ -11,8 +11,8 @@ export default function Header() {
                     <Image
                         src="/logo.png"
                         alt="Trailer Load Planner logo"
-                        width={80}
-                        height={80}
+                        width={100}
+                        height={100}
                         className="rounded"
                     />
                     <span className="text-xl font-bold">Trailer Load Planner</span>
