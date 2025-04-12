@@ -1,11 +1,9 @@
-// tailwind.config.ts
 import type { Config } from 'tailwindcss';
+import daisyui from 'daisyui';
 
 const config: Config = {
-  content: [
-    './src/**/*.{ts,tsx,js,jsx}', // adjust if you move pages/components
-  ],
-  darkMode: 'class', // enable manual dark mode with class
+  content: ['./src/**/*.{ts,tsx,js,jsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -18,7 +16,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [daisyui],
 };
 
 export default config;
