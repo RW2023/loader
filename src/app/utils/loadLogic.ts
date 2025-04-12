@@ -33,13 +33,12 @@ export function getRecommendation(fitsIn: FitsIn): string {
 }
 
 export function requiresSidewaysLoading(totalCarts: number, bins: number): boolean {
-  const cartSlots = totalCarts * 4;
-  const binSlots = bins; // 1 bin = 1 slot
-  const totalSlots = cartSlots + binSlots;
-
-  // If total slots used is divisible by 4, no sideways loading needed
+  const totalSlots = totalCarts + bins * 0.5;
+  return totalSlots % 4 !== 0;
+  // Needs to be a multiple of 4 and whole number to be evenly distributed
   return totalSlots % 4 !== 0;
 }
+
 
 
 

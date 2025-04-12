@@ -12,6 +12,8 @@ type LoadSummaryProps = {
         straight: boolean;
     };
     recommendation: string;
+
+    
 };
 
 export default function LoadSummary({
@@ -22,6 +24,14 @@ export default function LoadSummary({
     recommendation,
 }: LoadSummaryProps) {
     const showSidewaysBadge = requiresSidewaysLoading(totalCarts, bins);
+
+    console.log({
+        totalCarts,
+        bins,
+        totalSlots: totalCarts * 4 + bins,
+        sideways: requiresSidewaysLoading(totalCarts, bins),
+    });
+
 
     return (
         <div className="mt-8 w-full max-w-md">
