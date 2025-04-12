@@ -26,8 +26,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <h1 className="text-3xl font-bold mb-6">Trailer Load Planner</h1>
-
       <form className="w-full max-w-md space-y-4">
         <div>
           <label className="block text-lg font-medium mb-1">Laundry Carts:</label>
