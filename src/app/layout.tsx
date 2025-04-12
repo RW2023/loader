@@ -16,8 +16,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: " Loader",
-  description: "Easily calculate load options for Pup, 50 ft, and Straight Truck setups.",
+  title: "Trailer Load Planner",
+  description:
+    "Easily calculate load options for Pup, 50 ft, and Straight Truck setups.",
+  metadataBase: new URL("https://lplanner.vercel.app"), // ← update with your actual domain
+  openGraph: {
+    title: "Trailer Load Planner",
+    description:
+      "Calculate load options instantly for Pup, 50 ft, and Straight Trucks.",
+    url: "https://yourdomain.com",
+    siteName: "Trailer Load Planner",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Trailer Load Planner",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Trailer Load Planner",
+    description:
+      "Instantly determine how your carts and bins fit across different trailer types.",
+    creator: "Ryan Wilson", 
+  },
 };
 
 export default function RootLayout({
