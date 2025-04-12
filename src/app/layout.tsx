@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Trailer Load Planner",
+  title: " Loader",
   description: "Easily calculate load options for Pup, 50 ft, and Straight Truck setups.",
 };
 
