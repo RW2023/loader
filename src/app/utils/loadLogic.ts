@@ -25,5 +25,10 @@ export function getRecommendation(fitsIn: FitsIn): string {
   if (fitsIn.pup) options.push('Pup');
   if (fitsIn['50ft']) options.push('50 ft');
   if (fitsIn.straight) options.push('Straight Truck');
+
+  const allFit = fitsIn.pup && fitsIn['50ft'] && fitsIn.straight;
+
+  if (allFit) return 'Any Available';
   return options.length > 0 ? options.join(', ') : 'None – exceeds all capacities';
 }
+
