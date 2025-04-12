@@ -24,9 +24,9 @@ export default function LoadInputForm({
                 <input
                     type="number"
                     min="0"
-                    value={laundryCarts}
-                    onChange={(e) => setLaundryCarts(Number(e.target.value))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded"
+                    value={laundryCarts === 0 ? '' : laundryCarts}
+                    onChange={(e) => setLaundryCarts(Number(e.target.value) || 0)}
+                    className="input input-bordered w-full"
                     placeholder="Enter number of laundry carts"
                 />
             </div>
@@ -36,10 +36,10 @@ export default function LoadInputForm({
                 <input
                     type="number"
                     min="0"
-                    value={hmmsCarts}
-                    onChange={(e) => setHmmsCarts(Number(e.target.value))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded"
-                    title="Enter number of HMMS carts"
+                    value={hmmsCarts === 0 ? '' : hmmsCarts}
+                    onChange={(e) => setHmmsCarts(Number(e.target.value) || 0)}
+                    className="input input-bordered w-full"
+                    placeholder="Enter number of HMMS carts"
                 />
             </div>
 
@@ -48,10 +48,9 @@ export default function LoadInputForm({
                 <input
                     type="number"
                     min="0"
-                    value={bins}
-                    onChange={(e) => setBins(Number(e.target.value))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded"
-                    title="Enter number of bins"
+                    value={bins === 0 ? '' : bins}
+                    onChange={(e) => setBins(Number(e.target.value) || 0)}
+                    className="input input-bordered w-full"
                     placeholder="Enter number of bins"
                 />
             </div>
