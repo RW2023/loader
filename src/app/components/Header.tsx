@@ -4,11 +4,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTruck } from '@fortawesome/free-solid-svg-icons';
+import DarkToggle from './DarkToggle';
 
 export default function Header() {
     return (
-        <header className="w-full p-2 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
-            <div className="flex items-center space-x-3 max-w-4xl mx-auto">
+        <header className="sticky top-0 z-50 w-full p-2 border-b border-[var(--taupe-gray)] bg-[var(--color-background)] text-[var(--color-foreground)] shadow-sm">
+            <div className="flex items-center justify-between max-w-4xl mx-auto">
                 <Link href="/" className="flex items-center space-x-3">
                     <Image
                         src="/logo.png"
@@ -20,6 +21,7 @@ export default function Header() {
                     <FontAwesomeIcon icon={faTruck} className="text-primary text-xl" />
                     <span className="text-xl font-bold">Trailer Load Planner</span>
                 </Link>
+                <DarkToggle />
             </div>
         </header>
     );
