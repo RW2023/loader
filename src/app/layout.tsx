@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "@/app/lib/fontawesome"; // Import Font Awesome config
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
