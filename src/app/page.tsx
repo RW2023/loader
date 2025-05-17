@@ -29,7 +29,7 @@ export default function Home() {
   const recommendation = getRecommendation(fitsIn);
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-screen py-8 px-4 space-y-6">
+    <div className="flex flex-col items-center justify-start min-h-screen py-8 px-4 space-y-6 bg-[var(--color-background)] text-[var(--color-foreground)]">
       <div className="w-full max-w-md">
         <LoadInputForm
           laundryCarts={laundryCarts}
@@ -41,7 +41,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="card w-full max-w-md bg-base-100 shadow p-6 space-y-4">
+      <div className="card w-full max-w-md shadow p-6 space-y-4 border border-[var(--taupe-gray)] bg-[var(--ash-gray)] text-[var(--wenge)] dark:bg-[var(--wenge)] dark:text-[var(--ash-gray)]">
         <LoadSummary
           totalCarts={totalCarts}
           bins={bins}
