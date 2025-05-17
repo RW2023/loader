@@ -2,8 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTruck } from '@fortawesome/free-solid-svg-icons';
+
 import DarkToggle from './DarkToggle';
 
 export default function Header() {
@@ -18,7 +17,6 @@ export default function Header() {
                         height={48}
                         className="rounded"
                     />
-                    <FontAwesomeIcon icon={faTruck} className="text-primary text-xl" />
                     <span className="text-xl font-bold">Trailer Load Planner</span>
                 </Link>
                 <DarkToggle />
