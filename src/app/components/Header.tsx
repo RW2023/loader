@@ -2,6 +2,8 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTruck } from '@fortawesome/free-solid-svg-icons';
 
 export default function Header() {
     return (
@@ -11,10 +13,11 @@ export default function Header() {
                     <Image
                         src="/logo.png"
                         alt="Trailer Load Planner logo"
-                        width={100}
-                        height={100}
+                        width={48}
+                        height={48}
                         className="rounded"
                     />
+                    <FontAwesomeIcon icon={faTruck} className="text-primary text-xl" />
                     <span className="text-xl font-bold">Trailer Load Planner</span>
                 </Link>
             </div>

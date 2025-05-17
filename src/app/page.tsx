@@ -29,25 +29,30 @@ export default function Home() {
   const recommendation = getRecommendation(fitsIn);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <LoadInputForm
-        laundryCarts={laundryCarts}
-        hmmsCarts={hmmsCarts}
-        bins={bins}
-        setLaundryCarts={setLaundryCarts}
-        setHmmsCarts={setHmmsCarts}
-        setBins={setBins}
-      />
+    <div className="flex flex-col items-center justify-start min-h-screen py-8 px-4 space-y-6">
+      <div className="w-full max-w-md">
+        <LoadInputForm
+          laundryCarts={laundryCarts}
+          hmmsCarts={hmmsCarts}
+          bins={bins}
+          setLaundryCarts={setLaundryCarts}
+          setHmmsCarts={setHmmsCarts}
+          setBins={setBins}
+        />
+      </div>
 
-      <LoadSummary
-        totalCarts={totalCarts}
-        bins={bins}
-        totalCartEquiv={totalCartEquiv}
-        fitsIn={fitsIn}
-        recommendation={recommendation}
-      />
-
-      <ResetButton onReset={handleReset} />
+      <div className="card w-full max-w-md bg-base-100 shadow p-6 space-y-4">
+        <LoadSummary
+          totalCarts={totalCarts}
+          bins={bins}
+          totalCartEquiv={totalCartEquiv}
+          fitsIn={fitsIn}
+          recommendation={recommendation}
+        />
+        <div className="flex justify-end">
+          <ResetButton onReset={handleReset} />
+        </div>
+      </div>
     </div>
   );
 }

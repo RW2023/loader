@@ -1,5 +1,8 @@
 'use client';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartFlatbed, faCartShopping, faBoxOpen } from '@fortawesome/free-solid-svg-icons';
+
 type LoadInputFormProps = {
     laundryCarts: number;
     hmmsCarts: number;
@@ -20,7 +23,10 @@ export default function LoadInputForm({
     return (
         <form className="w-full max-w-md space-y-4">
             <div>
-                <label className="block text-lg font-medium mb-1">Laundry Carts:</label>
+                <label className="block text-lg font-medium mb-1">
+                    <FontAwesomeIcon icon={faCartFlatbed} className="mr-2 text-primary" />
+                    Laundry Carts:
+                </label>
                 <input
                     type="number"
                     min="0"
@@ -32,7 +38,10 @@ export default function LoadInputForm({
             </div>
 
             <div>
-                <label className="block text-lg font-medium mb-1">HMMS Carts:</label>
+                <label className="block text-lg font-medium mb-1">
+                    <FontAwesomeIcon icon={faCartShopping} className="mr-2 text-primary" />
+                    HMMS Carts:
+                </label>
                 <input
                     type="number"
                     min="0"
@@ -44,7 +53,10 @@ export default function LoadInputForm({
             </div>
 
             <div>
-                <label className="block text-lg font-medium mb-1">Bins:</label>
+                <label className="block text-lg font-medium mb-1">
+                    <FontAwesomeIcon icon={faBoxOpen} className="mr-2 text-primary" />
+                    Bins:
+                </label>
                 <input
                     type="number"
                     min="0"
