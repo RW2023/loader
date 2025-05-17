@@ -1,31 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  /* Light mode colors */
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-background: hsl(0, 0%, 100%);
+  --color-foreground: hsl(273, 4%, 20%);
 
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  /* Optional font vars (if using Geist or custom fonts) */
-  --font-sans: system-ui, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ash-gray: hsl(159, 16%, 79%);
+  --ash-gray-2: hsl(184, 12%, 72%);
+  --cadet-gray: hsl(210, 5%, 64%);
+  --taupe-gray: hsl(273, 4%, 52%);
+  --wenge: hsl(346, 8%, 31%);
 }
 
-/* Dark mode overrides */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+[data-theme="customdark"] {
+  --color-background: hsl(0, 0%, 5%);
+  --color-foreground: hsl(0, 0%, 95%);
 
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-  }
+  --ash-gray: hsl(159, 16%, 79%);
+  --ash-gray-2: hsl(184, 12%, 72%);
+  --cadet-gray: hsl(210, 5%, 64%);
+  --taupe-gray: hsl(273, 4%, 52%);
+  --wenge: hsl(346, 8%, 31%);
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
 }
