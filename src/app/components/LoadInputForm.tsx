@@ -1,9 +1,13 @@
 'use client';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartFlatbed, faCartShopping, faBoxOpen } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCartFlatbed,
+    faCartShopping,
+    faBoxOpen,
+} from '@fortawesome/free-solid-svg-icons';
 
-type LoadInputFormProps = {
+export type LoadInputFormProps = {
     laundryCarts: number;
     hmmsCarts: number;
     bins: number;
@@ -21,49 +25,68 @@ export default function LoadInputForm({
     setBins,
 }: LoadInputFormProps) {
     return (
-        <form className="w-full max-w-md space-y-4 bg-[var(--color-background)] text-[var(--color-foreground)]">
-            <div>
-                <label className="block text-lg font-medium mb-1">
-                    <FontAwesomeIcon icon={faCartFlatbed} className="mr-2 text-[var(--taupe-gray)]" />
-                    Laundry Carts:
+        <form className="card bg-base-100 p-4 shadow space-y-4 w-full max-w-md">
+            <div className="form-control">
+                <label className="label">
+                    <span className="label-text text-lg flex items-center gap-2">
+                        <FontAwesomeIcon
+                            icon={faCartFlatbed}
+                            className="text-[var(--taupe-gray)]"
+                        />
+                        Laundry Carts
+                    </span>
                 </label>
                 <input
                     type="number"
                     min="0"
                     value={laundryCarts === 0 ? '' : laundryCarts}
-                    onChange={(e) => setLaundryCarts(Number(e.target.value) || 0)}
-                    className="input input-bordered w-full bg-[var(--ash-gray)] text-[var(--wenge)] dark:bg-[var(--wenge)] dark:text-[var(--ash-gray)] border border-[var(--taupe-gray)]"
-                    placeholder="Enter number of laundry carts"
+                    onChange={(e) =>
+                        setLaundryCarts(Number(e.target.value) || 0)
+                    }
+                    className="input input-bordered"
+                    placeholder="0"
                 />
             </div>
 
-            <div>
-                <label className="block text-lg font-medium mb-1">
-                    <FontAwesomeIcon icon={faCartShopping} className="mr-2 text-[var(--taupe-gray)]" />
-                    HMMS Carts:
+            <div className="form-control">
+                <label className="label">
+                    <span className="label-text text-lg flex items-center gap-2">
+                        <FontAwesomeIcon
+                            icon={faCartShopping}
+                            className="text-[var(--taupe-gray)]"
+                        />
+                        HMMS Carts
+                    </span>
                 </label>
                 <input
                     type="number"
                     min="0"
                     value={hmmsCarts === 0 ? '' : hmmsCarts}
-                    onChange={(e) => setHmmsCarts(Number(e.target.value) || 0)}
-                    className="input input-bordered w-full bg-[var(--ash-gray)] text-[var(--wenge)] dark:bg-[var(--wenge)] dark:text-[var(--ash-gray)] border border-[var(--taupe-gray)]"
-                    placeholder="Enter number of HMMS carts"
+                    onChange={(e) =>
+                        setHmmsCarts(Number(e.target.value) || 0)
+                    }
+                    className="input input-bordered"
+                    placeholder="0"
                 />
             </div>
 
-            <div>
-                <label className="block text-lg font-medium mb-1">
-                    <FontAwesomeIcon icon={faBoxOpen} className="mr-2 text-[var(--taupe-gray)]" />
-                    Bins:
+            <div className="form-control">
+                <label className="label">
+                    <span className="label-text text-lg flex items-center gap-2">
+                        <FontAwesomeIcon
+                            icon={faBoxOpen}
+                            className="text-[var(--taupe-gray)]"
+                        />
+                        Bins
+                    </span>
                 </label>
                 <input
                     type="number"
                     min="0"
                     value={bins === 0 ? '' : bins}
                     onChange={(e) => setBins(Number(e.target.value) || 0)}
-                    className="input input-bordered w-full bg-[var(--ash-gray)] text-[var(--wenge)] dark:bg-[var(--wenge)] dark:text-[var(--ash-gray)] border border-[var(--taupe-gray)]"
-                    placeholder="Enter number of bins"
+                    className="input input-bordered"
+                    placeholder="0"
                 />
             </div>
         </form>
