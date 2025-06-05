@@ -32,7 +32,7 @@ export default function Home() {
   const recommendation = getRecommendation(fitsIn);
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-screen py-10 px-4 gap-y-10 bg-[var(--color-background)] text-[var(--color-foreground)]">
+    <div className="flex flex-col items-center justify-start min-h-screen py-8 px-4 gap-y-6 bg-[var(--color-background)] text-[var(--color-foreground)]">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="card w-full max-w-md shadow-lg p-6 space-y-4 border border-[var(--taupe-gray)] bg-[var(--ash-gray)] text-[var(--wenge)] dark:bg-[var(--wenge)] dark:text-[var(--ash-gray)] rounded-xl"
+        className="w-full max-w-md space-y-4"
       >
         <LoadSummary
           totalCarts={totalCarts}
