@@ -49,7 +49,7 @@ export default function LoadSummary({
             {showSidewaysBadge && (
                 <div className="alert alert-warning py-2 text-sm flex items-center gap-2">
                     <AlertTriangle size={18} />
-                    <span>Sideways loading recommended</span>
+                    <span>Sideways loading required</span>
                 </div>
             )}
 
