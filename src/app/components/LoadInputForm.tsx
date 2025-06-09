@@ -2,7 +2,7 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faBarsStaggered,
+    faBars,
     faCartFlatbed,
     faTrashCan,
 } from '@fortawesome/free-solid-svg-icons';
@@ -30,7 +30,7 @@ export default function LoadInputForm({
                 <label className="label">
                     <span className="label-text text-lg flex items-center gap-2 text-[var(--color-foreground)]">
                         <FontAwesomeIcon
-                            icon={faBarsStaggered}
+                            icon={faBars}
                             className="text-[var(--taupe-gray)]"
                             title="Laundry Carts"
                         />
