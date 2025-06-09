@@ -3,7 +3,7 @@
 **A mobile-friendly utility for truck drivers to quickly calculate trailer fit based on cart types and bin counts.**
 
 <!-- screenshot -->
-![screenshot](public/loadersDark.png)
+![screenshot](https://www.ryan-w.dev/projects/loaderDark.png)
 
 ---
 
