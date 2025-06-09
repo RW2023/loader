@@ -2,7 +2,7 @@
 
 **A mobile-friendly utility for truck drivers to quickly calculate trailer fit based on cart types and bin counts.**
 
-![screenshot](https://lplanner.vercel.app/loader.png) <!-- screenshot -->
+![screenshot](https://lplanner.vercel.app/loaderDark.png) <!-- screenshot -->
 
 ---
 
