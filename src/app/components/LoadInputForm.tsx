@@ -2,9 +2,9 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faCartFlatbed,
-    faCartShopping,
-    faBoxOpen,
+    faBarsStaggered,
+    faKitMedical,
+    faTrashCan,
 } from '@fortawesome/free-solid-svg-icons';
 
 export type LoadInputFormProps = {
@@ -30,8 +30,9 @@ export default function LoadInputForm({
                 <label className="label">
                     <span className="label-text text-lg flex items-center gap-2">
                         <FontAwesomeIcon
-                            icon={faCartFlatbed}
+                            icon={faBarsStaggered}
                             className="text-[var(--taupe-gray)]"
+                            title="Laundry Carts"
                         />
                         Laundry Carts
                     </span>
@@ -52,8 +53,9 @@ export default function LoadInputForm({
                 <label className="label">
                     <span className="label-text text-lg flex items-center gap-2">
                         <FontAwesomeIcon
-                            icon={faCartShopping}
+                            icon={faKitMedical}
                             className="text-[var(--taupe-gray)]"
+                            title="HMMS Carts"
                         />
                         HMMS Carts
                     </span>
@@ -74,8 +76,9 @@ export default function LoadInputForm({
                 <label className="label">
                     <span className="label-text text-lg flex items-center gap-2">
                         <FontAwesomeIcon
-                            icon={faBoxOpen}
+                            icon={faTrashCan}
                             className="text-[var(--taupe-gray)]"
+                            title="Bins"
                         />
                         Bins
                     </span>

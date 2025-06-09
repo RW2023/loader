@@ -2,7 +2,8 @@
 
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import { Sun as SunIcon, Moon as MoonIcon, Laptop as SystemIcon } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon, faLaptop } from '@fortawesome/free-solid-svg-icons';
 
 const modes = ['light', 'dark', 'system'] as const;
 type Mode = typeof modes[number];
@@ -19,8 +20,9 @@ export default function DarkToggle() {
 
     const realTheme = theme === 'system' ? systemTheme : theme;
 
-    let Icon = realTheme === 'dark' ? MoonIcon : SunIcon;
-    if (theme === 'system') Icon = SystemIcon;
+    let icon = faSun;
+    if (realTheme === 'dark') icon = faMoon;
+    if (theme === 'system') icon = faLaptop;
 
     const handleClick = () => {
         const nextIndex = (modes.indexOf(theme as Mode) + 1) % modes.length;
@@ -33,7 +35,7 @@ export default function DarkToggle() {
             aria-label="Toggle theme"
             className="p-2 hover:opacity-80 transition"
         >
-            <Icon size={20} />
+            <FontAwesomeIcon icon={icon} size="lg" />
         </button>
     );
 }
