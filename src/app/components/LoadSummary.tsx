@@ -4,10 +4,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faTruck,
-    faTruckRampBox,
+    faDog,
     faTruckMoving,
+    faTriangleExclamation,
 } from '@fortawesome/free-solid-svg-icons';
-import { AlertTriangle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { requiresSidewaysLoading } from '@/app/utils/loadLogic';
 
@@ -48,7 +48,10 @@ export default function LoadSummary({
             <h2 className="text-xl font-bold mb-2">Load Summary</h2>
             {showSidewaysBadge && (
                 <div className="alert alert-warning py-2 text-sm flex items-center gap-2">
-                    <AlertTriangle size={18} />
+                    <FontAwesomeIcon
+                        icon={faTriangleExclamation}
+                        title="Sideways Loading Required"
+                    />
                     <span>Sideways loading required</span>
                 </div>
             )}
@@ -65,7 +68,7 @@ export default function LoadSummary({
                     transition={{ duration: 0.3 }}
                     className={`alert ${fitsIn.pup ? 'alert-success' : 'alert-error'} py-2 text-sm flex items-center gap-2`}
                 >
-                    <FontAwesomeIcon icon={faTruckRampBox} />
+                    <FontAwesomeIcon icon={faDog} title="Pup Trailer" />
                     <span>Pup (max 25): {fitsIn.pup ? 'Fits' : 'Too Full'}</span>
                 </motion.div>
                 <motion.div
@@ -75,7 +78,7 @@ export default function LoadSummary({
                     transition={{ duration: 0.3, delay: 0.1 }}
                     className={`alert ${fitsIn['50ft'] ? 'alert-success' : 'alert-error'} py-2 text-sm flex items-center gap-2`}
                 >
-                    <FontAwesomeIcon icon={faTruckMoving} />
+                    <FontAwesomeIcon icon={faTruckMoving} title="50 ft Trailer" />
                     <span>50 ft (max 38): {fitsIn['50ft'] ? 'Fits' : 'Too Full'}</span>
                 </motion.div>
                 <motion.div
@@ -85,13 +88,13 @@ export default function LoadSummary({
                     transition={{ duration: 0.3, delay: 0.2 }}
                     className={`alert ${fitsIn.straight ? 'alert-success' : 'alert-error'} py-2 text-sm flex items-center gap-2`}
                 >
-                    <FontAwesomeIcon icon={faTruck} />
+                    <FontAwesomeIcon icon={faTruck} title="Straight Truck" />
                     <span>Straight Truck (max 20): {fitsIn.straight ? 'Fits' : 'Too Full'}</span>
                 </motion.div>
             </div>
 
             <div className={`mt-4 alert ${getRecommendationStyle(recommendation)} flex items-center gap-2`}>
-                <FontAwesomeIcon icon={faTruck} />
+                <FontAwesomeIcon icon={faTruck} title="Recommendation" />
                 <span>Recommended: {recommendation}</span>
             </div>
         </motion.div>
