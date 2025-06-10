@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description:
     "Easily calculate load options for Pup, 50 ft, and Straight Truck setups.",
   metadataBase: new URL("https://lplanner.vercel.app"),
-  manifest: "/manifest.webmanifest",
+  manifest: "/manifest.json",
   openGraph: {
     title: "Trailer Load Planner",
     description:
